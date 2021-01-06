@@ -175,13 +175,13 @@ func (tr *Transport) Connect(ctx context.Context, creds transport.Credentials) e
 		}
 		tr.subm.RUnlock()
 		if tr.connectCallback != nil {
-			go tr.connectCallback(tr)
+			tr.connectCallback(tr)
 		}
 	})
 	o.SetConnectionLostHandler(func(_ mqtt.Client, err error) {
 		tr.logger.Debugf("connection lost: %v", err)
 		if tr.disconnectCallback != nil {
-			go tr.disconnectCallback(tr)
+			tr.disconnectCallback(tr)
 		}
 	})
 
