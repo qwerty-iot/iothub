@@ -1,6 +1,9 @@
 # iothub
 
-Azure IoT Hub SDK for Golang, provides both device-to-cloud ([`iotdevice`](iotdevice)) and cloud-to-device ([`iotservice`](iotservice)) packages for end-to-end communication.
+Forked from github.com/qwerty-iot/iothub, without his efforts, this library wouldn't be possible.
+
+Azure IoT Hub SDK for Golang, provides both device-to-cloud ([`iotdevice`](iotdevice)) and
+cloud-to-device ([`iotservice`](iotservice)) packages for end-to-end communication.
 
 API is subject to change until `v1.0.0`. Bumping minor version may indicate breaking changes.
 
@@ -11,13 +14,13 @@ See [TODO](#todo) section to see what's missing in the library.
 To install the library as a dependency:
 
 ```bash
-go get -u github.com/amenzhinsky/iothub
+go get -u github.com/qwerty-iot/iothub
 ```
 
 To install CLI applications:
 
 ```bash
-GO111MODULE=on go get -u github.com/amenzhinsky/iothub/cmd/{iothub-service,iothub-device}
+GO111MODULE=on go get -u github.com/qwerty-iot/iothub/cmd/{iothub-service,iothub-device}
 ```
 
 ## Usage Example
@@ -33,7 +36,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/amenzhinsky/iothub/iotservice"
+	"github.com/qwerty-iot/iothub/iotservice"
 )
 
 func main() {
@@ -62,8 +65,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/amenzhinsky/iothub/iotdevice"
-	iotmqtt "github.com/amenzhinsky/iothub/iotdevice/transport/mqtt"
+	"github.com/qwerty-iot/iothub/iotdevice"
+	iotmqtt "github.com/qwerty-iot/iothub/iotdevice/transport/mqtt"
 )
 
 func main() {
@@ -86,21 +89,27 @@ func main() {
 }
 ```
 
-[cmd/iothub-service](https://github.com/amenzhinsky/iothub/blob/master/cmd/iothub-service) and [cmd/iothub-device](https://github.com/amenzhinsky/iothub/blob/master/cmd/iothub-device) are reference implementations of almost all available features. 
+[cmd/iothub-service](https://github.com/qwerty-iot/iothub/blob/master/cmd/iothub-service)
+and [cmd/iothub-device](https://github.com/qwerty-iot/iothub/blob/master/cmd/iothub-device) are reference
+implementations of almost all available features.
 
 ## CLI
 
-The project provides two command line utilities: `iothub-device` and `iothub-sevice`. First is for using it on IoT devices and the second manages and interacts with them. 
+The project provides two command line utilities: `iothub-device` and `iothub-sevice`. First is for using it on IoT
+devices and the second manages and interacts with them.
 
-You can perform operations like publishing, subscribing to events and feedback, registering and invoking direct methods and so on straight from the command line.
+You can perform operations like publishing, subscribing to events and feedback, registering and invoking direct methods
+and so on straight from the command line.
 
-`iothub-service` is a [iothub-explorer](https://github.com/Azure/iothub-explorer) replacement that can be distributed as a single binary opposed to a typical nodejs app.
+`iothub-service` is a [iothub-explorer](https://github.com/Azure/iothub-explorer) replacement that can be distributed as
+a single binary opposed to a typical nodejs app.
 
 See `-help` for more details.
 
 ## Testing
 
-`TEST_IOTHUB_SERVICE_CONNECTION_STRING` is required for end-to-end testing, which is a shared access policy connection string with all permissions.
+`TEST_IOTHUB_SERVICE_CONNECTION_STRING` is required for end-to-end testing, which is a shared access policy connection
+string with all permissions.
 
 `TEST_EVENTHUB_CONNECTION_STRING` is required for `eventhub` package testing.
 

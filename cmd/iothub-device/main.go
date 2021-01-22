@@ -10,10 +10,10 @@ import (
 	"os"
 	"sync"
 
-	"github.com/amenzhinsky/iothub/cmd/internal"
-	"github.com/amenzhinsky/iothub/iotdevice"
-	"github.com/amenzhinsky/iothub/iotdevice/transport"
-	"github.com/amenzhinsky/iothub/iotdevice/transport/mqtt"
+	"github.com/qwerty-iot/iothub/cmd/internal"
+	"github.com/qwerty-iot/iothub/iotdevice"
+	"github.com/qwerty-iot/iothub/iotdevice/transport"
+	"github.com/qwerty-iot/iothub/iotdevice/transport/mqtt"
 )
 
 var transports = map[string]func() (transport.Transport, error){

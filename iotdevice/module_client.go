@@ -1,9 +1,9 @@
 package iotdevice
 
 import (
-	"github.com/amenzhinsky/iothub/common"
-	"github.com/amenzhinsky/iothub/iotdevice/transport"
-	"github.com/amenzhinsky/iothub/logger"
+	"github.com/qwerty-iot/iothub/common"
+	"github.com/qwerty-iot/iothub/iotdevice/transport"
+	"github.com/qwerty-iot/iothub/logger"
 )
 
 // structs

@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/amenzhinsky/iothub/common"
+	"github.com/qwerty-iot/iothub/common"
 )
 
 type X509Credentials struct {

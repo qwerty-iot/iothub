@@ -1,4 +1,4 @@
-module github.com/amenzhinsky/iothub
+module github.com/qwerty-iot/iothub
 
 require (
 	github.com/Azure/go-amqp v0.13.1

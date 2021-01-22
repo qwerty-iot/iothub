@@ -5,8 +5,8 @@ import (
 	"crypto/tls"
 	"time"
 
-	"github.com/amenzhinsky/iothub/common"
-	"github.com/amenzhinsky/iothub/logger"
+	"github.com/qwerty-iot/iothub/common"
+	"github.com/qwerty-iot/iothub/logger"
 )
 
 // Transport interface.
